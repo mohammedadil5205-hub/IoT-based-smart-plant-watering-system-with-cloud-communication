@@ -1,9 +1,9 @@
 # IoT-based-smart-plant-watering-system-with-cloud-communication
 This project involves development of ESP32 bsed smart and safe plant watering system and data communication through BlynkIoT app.
 
-============================================================
+-------------------------------------------------------------------------------------
 PROJECT TITLE: Development of an ESP32 Smart and Safe Outdoor Plant Watering system
-============================================================
+-------------------------------------------------------------------------------------
 
 NOTE: This project was done under the guidance of faculty in our college in cooperation with 3 team members, thank you everyone for their support.
 
@@ -23,11 +23,9 @@ Key Features:
 
 ------------------------------------------------------------
 CONTENTS (File Structure)
-------------------------------------------------------------
-1. \Presentation
-   - Project_Presentation.pptx
+-----------------------------------------------------------
 
-2. \Datasheets
+1. \Datasheets
    - push button.pdf
    - water sensor.pdf
    - dc-mini-submersible-water-pump.pdf
@@ -38,20 +36,18 @@ CONTENTS (File Structure)
    - Relay-Module-Datasheet.pdf
    - Soil Moisture Sensor.pdf
 
-3. \Code
+2. \Code
    - Smart_Watering_System.ino (Main Arduino Sketch)
    - Smart_Watering_System.txt (txt file)
 
-4. \Video
-   - Execution_Video.mp4
-
-5. \Image gallery
+3. \Image gallery
     -circuit diagram.png
     -block diagram.png
     -flow chart.png
     -final model.png
     -blynkIoT setup.png
-6. \report
+   
+4. \report
     -project report.txt
 
 ------------------------------------------------------------
