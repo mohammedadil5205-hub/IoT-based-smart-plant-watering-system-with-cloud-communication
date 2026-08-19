@@ -1,0 +1,220 @@
+I like to thank all my teammates for their cooperation in this project
+
+METHODOLOGY
+
+The methodology adopted for this project involved the design, development, and 
+implementation of an IoT-based smart irrigation system that automates plant watering 
+using an ESP32 microcontroller. The process was divided into three main stages: system 
+design and architecture, hardware development, and software implementation. 
+1.System Design and Architecture 
+The system was designed around the ESP32 microcontroller, which serves as the main 
+processing and control unit. It has built-in Wi-Fi capability for real-time data 
+transmission. The system includes various sensors such as: 
+ DHT11 sensor – to measure temperature and humidity. 
+ Three soil moisture sensors – to monitor the moisture level in the soil. 
+ Water level sensor – to check the amount of water in the tank. 
+These sensors continuously collect data from the environment, which is processed by the 
+ESP32. Based on the readings, the controller decides whether to activate or deactivate the 
+water pump through a relay module. The power supply converts 220V AC to DC, and a 
+DC-DC buck converter ensures stable voltage for all components. The measured data is 
+displayed on a 20x4 LCD screen and can also be viewed remotely through the Telegram 
+mobile application using the ESP32’s Wi-Fi feature. 
+
+2. Hardware Development 
+2025-26 
+rried out using tools such as Autodesk Eagle 
+and Fritzing. The ESP32 was connected to all the sensors, the relay module, and the LCD 
+screen through its GPIO pins. A pushbutton switch was included to toggle between 
+ircuit was enclosed in a project box for 
+The hardware design and integration were ca
+and Fritzing. The ESP32 was connected to all the sensors, the relay module, and the LCD 
+screen through its GPIO pins. A pushbutton switch was included to toggle between 
+different display screens. The assembled c
+The hardware design and integration were carried out using tools such as Autodesk Eagle 
+and Fritzing. The ESP32 was connected to all the sensors, the relay module, and the LCD 
+screen through its GPIO pins. A pushbutton switch was included to toggle between 
+different display screens. The assembled circuit was enclosed in a project box for 
+protection and outdoor use. The relay module controlled three DC pumps used for 
+irrigating three separate fields or plant pots, each equipped with a soil moisture sensor. 
+The prototype ensured safety, compactness, and easy maintenance. 
+
+3. Software Development 
+The software part was developed and programmed using the Arduino IDE. The ESP32 
+control irrigation 
+The software part was developed and programmed using the Arduino IDE. The ESP32 
+was coded to read input data from sensors, analyze it, and automatically control irrigation 
+The software part was developed and programmed using the Arduino IDE. The ESP32 
+was coded to read input data from sensors, analyze it, and automatically
+based on preset thresholds. 
+Interrupt commands were used to prioritize tasks such as pushbutton actions and 
+Interrupt commands were used to prioritize tasks such as pushbutton actions and 
+Interrupt commands were used to prioritize tasks such as pushbutton actions and 
+communication processes. 
+Sensor libraries (for DHT11, LCD I2C, etc.) were imported for accurate data handling. 
+Sensor libraries (for DHT11, LCD I2C, etc.) were imported for accurate data handling.
+Sensor libraries (for DHT11, LCD I2C, etc.) were imported for accurate data handling.
+integration allowed remote access, where the user could send 
+Wi-Fi and Blynk IoT integration allowed remote access, where the user could send 
+commands (like “/readings”) to view live sensor data and irrigation status.
+integration allowed remote access, where the user could send 
+) to view live sensor data and irrigation status.
+
+Before implementation, the circuit was tested through simulation in Proteus software to 
+verify functionality and logic flow. Once verified, the real-time prototype was tested on 
+three different soil types to analyze the relationship between moisture level, temperature, 
+humidity, and irrigation timing.
+
+4. Operational Flow 
+The system operates through the following steps: 
+ Sensors collect data on soil moisture, temperature, humidity, and tank water level. 
+ The ESP32 processes the data and displays it on the LCD. 
+ If the soil moisture drops below the set threshold, the relay activates the pump for 
+irrigation. 
+ When the required moisture level is reached, the pump automatically turns off. 
+ All data and system status are simultaneously available to the user through the 
+Telegram app for remote monitoring.
+
+
+
+3.4 Components Description
+omponents Description 
+1. ESP32 Microcontroller 
+The ESP32 is the main control unit of the system. It is a low
+microcontroller with integrated Wi
+2025-26 
+cost, low-power 
+Fi and Bluetooth modules, making it ideal for IoT 
+onnect with sensors and actuators. The 
+ESP32 processes data from all sensors, makes irrigation decisions, and controls the water 
+pump via a relay. It also transmits data wirelessly to the Telegram application for remote 
+The ESP32 is the main control unit of the system. It is a low-cost, low
+microcontroller with integrated Wi-Fi and Bluetooth modules, making it ideal for IoT 
+applications. It has multiple GPIO pins that connect with sensors and actuators. The 
+ESP32 processes data from all sensors, makes irrigation decisions, and controls the water 
+pump via a relay. It also transmits data wirelessly to the Telegram application for remote 
+applications. It has multiple GPIO pins that c
+ESP32 processes data from all sensors, makes irrigation decisions, and controls the water 
+pump via a relay. It also transmits data wirelessly to the Telegram application for remote 
+monitoring.
+
+2. Power Supply Unit 
+The power supply converts the 220V AC mains voltage into DC voltage suitable for the 
+components. This ensures a stable and safe power source for the entire circuit. A DC-DC 
+to the required level (typically 5V or 
+The power supply converts the 220V AC mains voltage into DC voltage suitable for the 
+components. This ensures a stable and safe power source for the entire circuit. A DC
+buck converter is used to step down the DC voltage
+3.3V) for the ESP32 and sensors.
+The power supply converts the 220V AC mains voltage into DC voltage suitable for the 
+components. This ensures a stable and safe power source for the entire circuit. A DC
+buck converter is used to step down the DC voltage to the required level (typically 5V or 
+3.3V) for the ESP32 and sensors. 
+
+3. DHT11 Sensor (Temperature and Humidity Sensor)
+. DHT11 Sensor (Temperature and Humidity Sensor) 
+2025-26 
+The DHT11 measures both temperature and humidity of the surrounding environment. 
+data to determine the climatic condition of the field. These readings 
+help in optimizing irrigation according to environmental conditions, preventing 
+The DHT11 measures both temperature and humidity of the surrounding environment. 
+The ESP32 reads this data to determine the climatic condition of the field. These readings 
+help in optimizing irrigation according to environmental conditions, preventing 
+overwatering in humid conditions.
+The DHT11 measures both temperature and humidity of the surrounding environment. 
+data to determine the climatic condition of the field. These readings 
+help in optimizing irrigation according to environmental conditions, preventing 
+overwatering in humid conditions. 
+
+4. Soil Moisture Sensors 
+Three soil moisture sensors are used to measure the amount of water present in the soil. 
+They work by detecting changes in electrical resistance as soil moisture varies. When the 
+vate the water 
+Three soil moisture sensors are used to measure the amount of water present in the soil. 
+They work by detecting changes in electrical resistance as soil moisture varies. When the 
+soil becomes dry, the sensor readings drop, prompting the ESP32 to acti
+pump until the desired moisture level is reached.
+Three soil moisture sensors are used to measure the amount of water present in the soil. 
+They work by detecting changes in electrical resistance as soil moisture varies. When the 
+soil becomes dry, the sensor readings drop, prompting the ESP32 to activate the water 
+pump until the desired moisture level is reached. 
+
+5. Water Level Sensor 
+
+The water level sensor monitors the level of water in the tank or reservoir. It prevents the 
+too low, protecting the motor from dry 
+The water level sensor monitors the level of water in the tank or reservoir. It prevents the 
+pump from running when the water level is
+running and ensuring efficient water usage.
+The water level sensor monitors the level of water in the tank or reservoir. It prevents the 
+pump from running when the water level is too low, protecting the motor from dry 
+running and ensuring efficient water usage.
+
+
+6. Relay Module 
+The relay module acts as an electronic switch that controls the water pump. It receives 
+control signals from the ESP32 and 
+The relay module acts as an electronic switch that controls the water pump. It receives 
+switches the pump ON or OFF based on sensor 
+power control 
+The relay module acts as an electronic switch that controls the water pump. It receives 
+control signals from the ESP32 and switches the pump ON or OFF based on sensor 
+readings. The use of a relay ensures electrical isolation between the low-power control 
+power pump circuit. 
+readings. The use of a relay ensures electrical isolation between the low
+circuit and the high power
+
+7. DC Water Pump 
+The DC pump is used for supplying water to the plants. When the soil moisture level 
+drops below the set threshold, the relay activates the pump to start irrigation. Once the 
+moisture reaches the required level, the pump automatically stops, conserving water.
+
+8. LCD Display (20x4) 
+The 20x4 LCD display is used to show real-time data such as soil moisture, temperature, 
+humidity, and water level. It helps the user monitor the system locally without needing an 
+internet connection. A pushbutton switch is attached to allow the user to toggle between 
+different display screens.
+
+9. Pushbutton Switch 
+The pushbutton switch allows manual control of the display and other operations. When 
+pressed, it sends a signal to the ESP32 to switch between display modes or start specific 
+processes. 
+
+
+Software and Communication Tools 
+1. Arduino IDE 
+The Arduino Integrated Development Environment (IDE) was used to write, compile, and 
+upload the code to the ESP32 microcontroller. It supports libraries for the DHT11 sensor, 
+LCD display, and Wi-Fi communication. 
+2. Blynk IoT 
+The Blynk IoT app was used for real-time monitoring and control through IoT. A Blynk 
+IoT was created to communicate with the ESP32, allowing the user to receive sensor 
+readings and send commands such as “/readings” or “/start”. 
+3. Simulation Software 
+Software such as Proteus and Fritzing were used for circuit design and simulation before 
+actual hardware implementation. These tools helped verify circuit connections 
+and system logic. 
+
+
+
+
+ Summary 
+
+
+The project followed a systematic approach involving the design, development, and 
+testing of an IoT-based smart irrigation system using the ESP32 microcontroller. The 
+system architecture was designed to monitor soil moisture, temperature, humidity, and 
+water level using various sensors. These sensors provided real-time data to the ESP32, 
+which processed the information and controlled a water pump through a relay module to 
+automate irrigation. 
+The hardware development included assembling components such as the ESP32 board, 
+DHT11 sensor, soil moisture sensors, water level sensor, LCD display, and DC pumps. A 
+DC-DC buck converter supplied stable power to the system, while the LCD displayed 
+sensor data locally. The entire setup was housed in a protective enclosure for outdoor use. 
+The software was developed using Arduino IDE, where the ESP32 was programmed to 
+read sensor data, make irrigation decisions, and communicate via Wi-Fi. The Blynk IoT 
+mobile application was integrated for remote monitoring and control, allowing users to 
+view data and manage irrigation from anywhere. Before implementation, the system was 
+simulated using Proteus software to verify circuit design and logic. 
+This methodology ensured the successful creation of a smart, safe, and efficient irrigation 
+system capable of reducing water wastage, improving monitoring accuracy, and 
+promoting sustainable agricultural practices. 
